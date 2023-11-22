@@ -8,5 +8,24 @@
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+
+    <div class="accordeon" x-data="{open : null}"> 
+
+      <section>
+        <button @click="open = 1">bouton 1</button>
+        <p x-show="open === 1" x-collapse.duration.2000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero debitis cupiditate recusandae! Nostrum voluptatum consectetur iusto labore incidunt tempora neque nobis temporibus, numquam quas assumenda repellendus rem, non dolor harum.</p>
+      </section>
+
+      <section>
+        <button @click="open = 2">bouton 2</button>
+        <p x-show="open === 2" x-collapse.duration.2000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero debitis cupiditate recusandae! Nostrum voluptatum consectetur iusto labore incidunt tempora neque nobis temporibus, numquam quas assumenda repellendus rem, non dolor harum.</p>
+      </section>
+
+      <section>
+        <button @click="open = 3">bouton 3</button>
+        <p x-show="open === 3" x-collapse.duration.2000ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero debitis cupiditate recusandae! Nostrum voluptatum consectetur iusto labore incidunt tempora neque nobis temporibus, numquam quas assumenda repellendus rem, non dolor harum.</p>
+      </section>
+
+</div>
   </body>
 </html>
