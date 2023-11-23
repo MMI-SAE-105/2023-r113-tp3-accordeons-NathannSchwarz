@@ -26,9 +26,9 @@
     <h1>Onglets</h1>
     <div id="onglets" x-data="{IsOpen : 1,}">
       <ul role="tablist">
-        <li role="tab" :class="{actif:IsOpen === 1}">Onglet 1</li>
+        <li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">Onglet 1</li>
         <li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Onglet 2</li>
-        <li role="tab" :class="{actif:IsOpen === 3}">Onglet 3</li>
+        <li role="tab" :class="{actif:IsOpen === 3}" @click="IsOpen = 3">Onglet 3</li>
       </ul>
 
       <section>
