@@ -19,18 +19,33 @@
         left: 0;
         opacity: 0;
         transition: opacity 1000ms ease-in-out;
+        display: flex;
       }
+
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ol{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
     </style>
   </head>
   <body>
     <h1>Exercice Onglets</h1>
     <h2>Différents album du rappeur Livaï</h2>
     <div id="onglets" x-data="{IsOpen : 1,}">
-      <ul role="tablist">
-        <button><li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">VOSS</li></button>
-        <button><li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Une Bell Mort</li></button>
-        <button><li role="tab" :class="{actif:IsOpen === 3}" @click="IsOpen = 3">Un long fleuve bien chiant</li></button>
-      </ul>
+        <ul role="tablist">
+          <button><li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">VOSS</li></button>
+          <button><li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Une Belle Mort</li></button>
+          <button><li role="tab" :class="{actif:IsOpen === 3}" @click="IsOpen = 3">Un long fleuve bien chiant</li></button>
+        </ul>
 
       <section>
         <div class="parent">
