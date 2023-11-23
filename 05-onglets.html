@@ -6,18 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onglets</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+      .parent {
+        position: relative;
+      }
+      .parent>div.actif {
+        opacity: 1;
+      }
+      .parent>div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1000ms ease-in-out;
+      }
+    </style>
   </head>
   <body>
     <h1>Onglets</h1>
     <div id="onglets" x-data="{IsOpen : 1,}">
       <ul role="tablist">
         <li role="tab" :class="{actif:IsOpen === 1}">Onglet 1</li>
-        <li role="tab" :class="{actif:IsOpen === 2}">Onglet 2</li>
+        <li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Onglet 2</li>
         <li role="tab" :class="{actif:IsOpen === 3}">Onglet 3</li>
       </ul>
 
       <section>
-        <div>
+        <div class="parent">
           <div role="tabpanel" :class="{actif:IsOpen === 1}">
             <h1>Panneau 1</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, explicabo asperiores, voluptatem soluta id reprehenderit unde minima quos mollitia ullam quibusdam, temporibus pariatur itaque nisi tempora ipsa debitis? Suscipit, neque.</p>
