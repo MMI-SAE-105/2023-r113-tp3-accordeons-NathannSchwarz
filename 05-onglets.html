@@ -14,6 +14,7 @@
       .parent>div.actif {
         opacity: 1;
         position: relative;
+        z-index: 1;
       }
 
       .parent>div {
@@ -21,7 +22,9 @@
         top: 30px;
         left: 0;
         opacity: 0;
-        transition: opacity 1000ms ease-in-out 
+        transition: opacity 1000ms ease-in-out;
+        z-index: -1;
+
       }
 
       ul{
@@ -72,7 +75,7 @@
       <section>
         <div class="parent">
           <div role="tabpanel" :class="{actif:IsOpen === 1}">
-            <a href="https://open.spotify.com/intl-fr/album/2N3AW9GBVI1T5DBVpPIaeL?si=W66XpDEqQ-OYgXusCv_wlw">
+            <a href="https://open.spotify.com/intl-fr/album/2N3AW9GBVI1T5DBVpPIaeL?si=W66XpDEqQ-OYgXusCv_wlw" @click.prevent>
               <img src="./img/image voss.jpg" alt="Cover VOSS" width="400px" height="400px">
             </a>
 
@@ -92,7 +95,7 @@
           </div>
 
           <div role="tabpanel" :class="{actif:IsOpen === 2}">
-            <a href="https://open.spotify.com/intl-fr/album/4zteB5YKMc07112C0Aty1x?si=-HT5iW4DSlKRTIAql_ew2g">
+            <a href="https://open.spotify.com/intl-fr/album/4zteB5YKMc07112C0Aty1x?si=-HT5iW4DSlKRTIAql_ew2g" @click.prevent>
               <img src="./img/image une belle mort.jpg" alt="Cover Une Belle Mort" width="400px" height="400px">
             </a>
             <h2>Tracklist</h2>
@@ -115,7 +118,7 @@
           </div>
 
           <div role="tabpanel" :class="{actif:IsOpen === 3}">
-            <a href="https://open.spotify.com/intl-fr/album/6rGmf1hXWEB9tKTeGLENcQ?si=5c1jxNO7SPGaLH2bvIH1sw">
+            <a href="https://open.spotify.com/intl-fr/album/6rGmf1hXWEB9tKTeGLENcQ?si=5c1jxNO7SPGaLH2bvIH1sw" @click.prevent>
               <img src="./img/Un-long-fleuve-bien-chiant.jpg" alt="Cover Un long fleuve bien chiant" width="400px" height="400px">
             </a>
             <h2>Tracklist</h2>
