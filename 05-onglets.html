@@ -9,17 +9,18 @@
     <style>
       .parent {
         position: relative;
+        
       }
       .parent>div.actif {
         opacity: 1;
+        position: relative;
       }
       .parent>div {
         position: absolute;
-        top: 0;
+        top: 30px;
         left: 0;
         opacity: 0;
         transition: opacity 1000ms ease-in-out;
-        display: flex;
       }
 
       ul{
@@ -30,8 +31,21 @@
 
       ol{
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      h2{
+        text-align: center;
+      }
+
+      #onglets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       
       
@@ -39,7 +53,7 @@
   </head>
   <body>
     <h1>Exercice Onglets</h1>
-    <h2>Différents album du rappeur Livaï</h2>
+    <h2>Les Différents albums du rappeur Livaï</h2>
     <div id="onglets" x-data="{IsOpen : 1,}">
         <ul role="tablist">
           <button><li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">VOSS</li></button>
@@ -51,7 +65,6 @@
         <div class="parent">
           <div role="tabpanel" :class="{actif:IsOpen === 1}">
             <a href="https://open.spotify.com/intl-fr/album/2N3AW9GBVI1T5DBVpPIaeL?si=W66XpDEqQ-OYgXusCv_wlw">
-              <h1>Voss</h1>
               <img src="./img/image voss.jpg" alt="Cover VOSS" width="400px" height="400px">
             </a>
 
@@ -72,7 +85,6 @@
 
           <div role="tabpanel" :class="{actif:IsOpen === 2}">
             <a href="https://open.spotify.com/intl-fr/album/4zteB5YKMc07112C0Aty1x?si=-HT5iW4DSlKRTIAql_ew2g">
-              <h1>Une belle mort</h1>
               <img src="./img/image une belle mort.jpg" alt="Cover Une Belle Mort" width="400px" height="400px">
             </a>
             <h2>Tracklist</h2>
@@ -96,7 +108,6 @@
 
           <div role="tabpanel" :class="{actif:IsOpen === 3}">
             <a href="https://open.spotify.com/intl-fr/album/6rGmf1hXWEB9tKTeGLENcQ?si=5c1jxNO7SPGaLH2bvIH1sw">
-              <h1>Un long fleuve bien chiant</h1>
               <img src="./img/Un-long-fleuve-bien-chiant.jpg" alt="Cover Un long fleuve bien chiant" width="400px" height="400px">
             </a>
             <h2>Tracklist</h2>
