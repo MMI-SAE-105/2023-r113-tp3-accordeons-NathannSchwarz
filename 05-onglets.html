@@ -23,12 +23,13 @@
     </style>
   </head>
   <body>
-    <h1>Onglets</h1>
+    <h1>Exercice Onglets</h1>
+    <h2>Différents album du rappeur Livaï</h2>
     <div id="onglets" x-data="{IsOpen : 1,}">
       <ul role="tablist">
-        <li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">Onglet 1</li>
-        <li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Onglet 2</li>
-        <li role="tab" :class="{actif:IsOpen === 3}" @click="IsOpen = 3">Onglet 3</li>
+        <button><li role="tab" :class="{actif:IsOpen === 1}" @click="IsOpen = 1">VOSS</li></button>
+        <button><li role="tab" :class="{actif:IsOpen === 2}" @click="IsOpen = 2">Une Bell Mort</li></button>
+        <button><li role="tab" :class="{actif:IsOpen === 3}" @click="IsOpen = 3">Un long fleuve bien chiant</li></button>
       </ul>
 
       <section>
